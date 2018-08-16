@@ -22,3 +22,14 @@ func main() {
 		fmt.Print(f(i), " ")
 	}
 }
+
+func fibonacci1() func(int) int {
+	mid, ans := 0, 1
+	return func(x int) int {
+		if x < 2 {
+			return x
+		}
+		mid, ans = ans, ans+mid
+		return ans
+	}
+}
