@@ -34,3 +34,6 @@ PS：还是说那里不是写说明的？
 > 紗霧：看过我的闭包教程 https://github.com/jihezhi/BackEnd/blob/master/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3closure.md 了吗？看完有什么地方不明白吗？另外Go不鼓励你使用递归。
 
 是理解`f(i)`出错了，以为是`f(i)`需要调用一次`fibonacci`，实际上只是按`i`值填上而已？以及真没想到可以`mid, ans = ans, ans+mid`这么用，还是习惯一个个赋，不过这样真的很好用。
+
+## 8.18
+明天再细想强制类型转换的细节
