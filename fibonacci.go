@@ -36,9 +36,9 @@ func fibonacci1() func(int) int {
 
 func fibonacci2() func() int {
 
-	mid, mid1, ans := 0, 1, 0
+	mid, mid1, ans := 0, 1, 0 //紗霧：这里的ans可以看出来只是想临时使用的变量。变量应该严格遵守其作用范围，否则会对理解代码产生混乱。
 	return func() int {
-		ans = mid
+		ans = mid //紗霧：推荐直接在这里定义新的ans，而不是在上面定义。ans:=mid
 		mid, mid1 = mid1, mid+mid1
 		return ans
 	}
