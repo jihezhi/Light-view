@@ -43,3 +43,13 @@ func fibonacci2() func() int {
 		return ans
 	}
 }
+
+func fibonacci3() func() int {
+
+	mid, mid1:= 0, 1
+	return func() int {
+		ans := mid
+		mid, mid1 = mid1, mid+mid1
+		return ans
+	}
+}
