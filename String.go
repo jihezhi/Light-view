@@ -15,7 +15,7 @@ func main() {
 		"googleDNS": {8, 8, 8, 8},
 	}
 	for name, ip := range hosts {
-		fmt.Printf("%v: %v\n", name, ip.String)
+		fmt.Printf("%v: %v\n", name, ip.String) //紗霧：在Go中如果不是特殊需求，没必要使用Printf。请尝试使用Print
 	}
 
 }
