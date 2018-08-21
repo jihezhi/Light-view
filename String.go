@@ -53,7 +53,7 @@ type IPAddr [4]byte
 
 // TODO: Add a "String() string" method to IPAddr.
 func (v IPAddr) String() string {
-	return fmt.Sprintf("%v.%v.%v.%v ", v[0], v[1], v[2], v[3])
+	return fmt.Sprint(v[0], ".", v[1], ".", v[2], ".", v[3])
 }
 
 func main() {
@@ -63,7 +63,7 @@ func main() {
 	}
 	//fmt.Print(hosts["googleDNS"])
 	for name, ip := range hosts {
-		fmt.Printf("%v: %v\n", name, ip)
+		fmt.Print(name, ":", ip, "\n")
 	}
 
 }
