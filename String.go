@@ -53,7 +53,7 @@ type IPAddr [4]byte
 
 // TODO: Add a "String() string" method to IPAddr.
 func (v IPAddr) String() string {
-	return fmt.Sprint(v[0], ".", v[1], ".", v[2], ".", v[3])
+	return fmt.Sprint(v[0], ".", v[1], ".", v[2], ".", v[3]) // 紗霧：很棒！你掌握了更加贴近Go风格的用法。之后你想用Printf也不是不可以，当你真正需要它的时候，比如说如果你需要控制输出格式。
 }
 
 func main() {
@@ -63,7 +63,7 @@ func main() {
 	}
 	//fmt.Print(hosts["googleDNS"])
 	for name, ip := range hosts {
-		fmt.Print(name, ":", ip, "\n")
+		fmt.Print(name, ":", ip, "\n") // 紗霧：完美~
 	}
 
 }
