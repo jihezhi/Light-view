@@ -19,7 +19,7 @@ func fibonacci() func(int) int {
 func main() {
 	f := fibonacci()
 	for i := 0; i < 10; i++ {
-		fmt.Print(f(i), " ")
+		fmt.Print(f(), " ")
 	}
 }
 
@@ -53,13 +53,5 @@ func fibonacci3() func() int {
 		ans := mid
 		mid, mid1 = mid1, mid+mid1
 		return ans
-	}
-}
-
-func fibonacci() func() int {
-	mid, mid1:= 0, 1
-	return func() int {
-		mid, mid1 = mid1, mid+mid1
-		return mid
 	}
 }
