@@ -43,7 +43,7 @@ func Sqrt(x float64) (float64, error) {
 		return x, ErrNegativeSqrt(x)
 	}
 	for i := 0; i < 10; i++ {
-		z =z- (z*z - x) / (2 * z)
+		z =z- (z*z - x) / (2 * z) //纱雾：我不是这个意思。函数式编程不使用任何变量，你这里使用了变量，具体而言，是进行了给变量赋值的行为。
 		if math.Abs(d-z) < 0.00000001 {
 			break
 		}
